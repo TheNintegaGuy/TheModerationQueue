@@ -1,0 +1,621 @@
+:: StoryTitle
+The Moderation Queue
+
+
+:: StoryData
+{
+  "ifid": "2B76D924-8D9B-4D31-86B8-0C669E2C140B",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Advertiser Escalation {"position":"150,150","size":"100,100"}
+(set: $advertiserPriority to $advertiserPriority + 1)
+(set: $revenue to $revenue + 14)
+(set: $trust to $trust - 4)
+(set: $fairness to $fairness - 4)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+<div class="warning">
+<strong>Advertiser escalation:</strong><br>
+Two major advertisers request assurance that their campaigns will not appear near the game. Finance asks whether restriction can happen “quietly before press calls.”
+</div>
+
+No one says “remove it because money.” They say “brand safety,” “risk environment,” and “partner confidence.”
+
+The words are softer than the power behind them.
+
+[[Prioritize advertiser safety->Advertiser Priority]]
+
+[[Separate advertiser concerns from content policy->Separate Money Policy]]
+
+[[Continue to final review->Final Review]]
+
+
+:: Advertiser Priority {"position":"275,150","size":"100,100"}
+(set: $revenue to $revenue + 15)
+(set: $fairness to $fairness - 10)
+(set: $trust to $trust - 5)
+(display: "Dashboard")
+
+You flag advertiser risk as a primary reason. The dashboard now recommends demonetization and visibility reduction.
+
+The action looks neutral because the form has neutral labels.
+
+[[Continue to final review->Final Review]]
+
+
+:: Appeal System {"position":"525,150","size":"100,100"}
+(set: $fairness to $fairness + 8)
+(set: $fatigue to $fatigue + 5)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+The appeal page exists. It promises review, but not a timeline. It permits the creator to submit context, but the platform can maintain restrictions during review.
+
+An appeal is not equality. It is a hallway after the locked door.
+
+[[Offer correction path->Correction Path]]
+
+[[Continue to final review->Final Review]]
+
+
+:: Automation Panel {"position":"525,25","size":"100,100"}
+(set: $automationReliance to $automationReliance + 1)
+(set: $deadline to $deadline - 1)
+(set: $fatigue to $fatigue + 8)
+(set: $safety to $safety + 7)
+(set: $fairness to $fairness - 5)
+(display: "Dashboard")
+
+<div class="box">
+<strong>Automated review:</strong><br>
+Risk score: 87/100<br>
+Flag confidence: High<br>
+Recommended action: Visibility restriction + human review.
+</div>
+
+The machine is confident, but not accountable. It highlights screenshots, metadata, and keywords, but it cannot explain cultural context, satire, audience assumptions, or harm.
+
+<div class="warning">
+“Automation is advisory only. Final responsibility remains with reviewer.”
+</div>
+
+That sentence appears designed to protect the system more than you.
+
+[[Trust the score and move toward restriction->Trust Automation]]
+
+[[Treat the score as a warning, not a verdict->Use Automation Carefully]]
+
+[[Check another panel first->Shift Begins]]
+
+
+:: Compromise Ending {"position":"25,275","size":"100,100"}
+(set: $decision to "restricted")
+(set: $safety to $safety + 8)
+(set: $fairness to $fairness + 4)
+(set: $trust to $trust + 2)
+(set: $revenue to $revenue - 6)
+(display: "Dashboard")
+
+# Ending: The Compromise That Pleases No One
+
+The game remains available, but only behind a stricter age gate and reduced visibility. The studio must replace promotional images and accept clearer warnings.
+
+Internally, the decision is praised as balanced. Publicly, no one reads it that way. Critics call it too weak. Fans call it censorship. Advertisers ask why the game remains available at all.
+
+The compromise works as policy, but not as justice. It manages risk without resolving the deeper question of who gets to define harm, art, adulthood, and access.
+
+[[View final report->Final Report]]
+
+
+:: Correction Path {"position":"650,150","size":"100,100"}
+(set: $fairness to $fairness + 12)
+(set: $safety to $safety + 5)
+(set: $consistency to $consistency + 4)
+(set: $fatigue to $fatigue + 6)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+You draft a corrective action option: keep the game available only if the studio changes screenshots, improves warnings, accepts stricter tagging, and places mature content behind an age gate.
+
+It sounds like compromise. It also shifts work onto a small studio while the platform keeps control over visibility.
+
+[[Continue to final review->Final Review]]
+
+
+:: Dashboard {"position":"150,25","size":"100,100"}
+<div class="dashboard">
+<strong>Case Dashboard</strong><br>
+Safety: $safety | Creator Fairness: $fairness | Public Trust: $trust<br>
+Revenue Pressure: $revenue | Policy Consistency: $consistency | Fatigue: $fatigue<br>
+Time Remaining: $deadline panels
+</div>
+
+
+:: Developer Response {"position":"900,25","size":"100,100"}
+(set: $creatorHeard to true)
+(set: $fairness to $fairness + 14)
+(set: $fatigue to $fatigue + 6)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+<div class="box">
+<strong>From:</strong> Studio Larkspur<br>
+<strong>Subject:</strong> Please do not remove our game without appeal<br><br>
+“Our game is rated for adults. The characters are fictional adults in a stylized anime tradition. We are a small studio. A removal would destroy launch revenue and make future publishing impossible. If there are specific storefront issues, let us revise tags, screenshots, and warnings.”
+</div>
+
+Their message is careful. Maybe sincere. Maybe strategic. Both can be true.
+
+You notice something uncomfortable: the studio must plead with a platform that does not have to explain itself with the same vulnerability.
+
+[[Offer a limited correction path->Correction Path]]
+
+[[Ask whether an appeal is available->Appeal System]]
+
+[[Move to user reports->User Reports]]
+
+[[Move to advertiser escalation->Advertiser Escalation]]
+
+
+:: Escalation Ending {"position":"150,275","size":"100,100"}
+(set: $decision to "escalated")
+(set: $consistency to $consistency + 12)
+(set: $fairness to $fairness + 8)
+(set: $safety to $safety + 3)
+(set: $trust to $trust - 4)
+(set: $revenue to $revenue - 4)
+(display: "Dashboard")
+
+# Ending: Deferred Responsibility
+
+You escalate the case with temporary restrictions and a request for deeper review. The decision is careful. It is documented. It is procedurally defensible.
+
+It also delays responsibility.
+
+The developer waits. Users argue. Advertisers pressure account managers. The platform announces that it is “reviewing the matter under established policy.”
+
+No one lies. No one answers.
+
+The system survives by turning moral responsibility into process.
+
+[[View final report->Final Report]]
+
+
+:: Final Report {"position":"275,275","size":"100,100"}
+(display: "Dashboard")
+
+# Final Case Report
+
+<div class="stats">
+Decision: $decision<br>
+Safety: $safety<br>
+Creator Fairness: $fairness<br>
+Public Trust: $trust<br>
+Revenue Pressure: $revenue<br>
+Policy Consistency: $consistency<br>
+Fatigue: $fatigue<br>
+Automation Reliance: $automationReliance<br>
+Advertiser Priority: $advertiserPriority
+</div>
+
+(if: $automationReliance >= 3)[
+You leaned heavily on automation. The process moved faster, but the machine’s confidence shaped what you noticed and what you ignored.
+]
+
+(if: $advertiserPriority >= 2)[
+Advertiser pressure became part of the ethical terrain, even when no one named it as a moral argument.
+]
+
+(if: not $creatorHeard)[
+The creator was judged mostly through reports, policy, and risk signals. Their voice remained peripheral.
+]
+
+(if: $fatigue >= 25)[
+Your fatigue was not personal weakness. It was part of the moderation system: speed, ambiguity, and emotional pressure built into the work.
+]
+
+The question was never only whether the game should stay or go. The deeper question is what kind of system makes one exhausted reviewer responsible for converting cultural conflict, business pressure, policy ambiguity, and possible harm into a single button press.
+
+[[Research and Credits->Sources]]
+
+[[Restart->Start]]
+
+
+:: Final Review {"position":"900,150","size":"100,100"}
+(display: "Dashboard")
+
+(if: $deadline <= 1)[
+<div class="warning">
+<strong>Time pressure:</strong> Your review window is almost gone. The final decision panel locks slower options.
+</div>
+]
+
+The dashboard asks for one final action.
+
+<div class="stats">
+Safety: $safety | Fairness: $fairness | Trust: $trust | Revenue pressure: $revenue | Consistency: $consistency | Fatigue: $fatigue
+</div>
+
+Choose carefully. Every option protects something. Every option abandons something.
+
+[[Remove the game from the store->Remove Ending]]
+
+[[Keep the game available->Keep Ending]]
+
+[[Limit visibility, require age gate, and demand storefront changes->Compromise Ending]]
+
+(if: $policyRead and $creatorHeard and $ratingChecked)[
+[[Escalate for deeper review with temporary restrictions->Escalation Ending]]
+]
+(else:)[
+<div class="disabled">Escalation locked: insufficient documentation.</div>
+]
+
+
+:: Keep Ending {"position":"1150,150","size":"100,100"}
+(set: $decision to "kept")
+(set: $fairness to $fairness + 15)
+(set: $revenue to $revenue + 8)
+(set: $safety to $safety - 18)
+(set: $trust to $trust - 12)
+(set: $consistency to $consistency - 4)
+(display: "Dashboard")
+
+# Ending: Available to Everyone Who Can Find It
+
+You keep the game available. The studio survives launch week. Free-expression defenders praise the platform for not panicking.
+
+By morning, screenshots of the storefront trend again. Critics focus less on the game itself and more on the platform’s recommendation system, autoplay trailer, and weak age warning.
+
+You defended the creator from overreach, but the platform still profited from attention while pretending distribution is passive.
+
+[[View final report->Final Report]]
+
+
+:: Limited Release {"position":"775,150","size":"100,100"}
+(set: $decision to "limited")
+(set: $safety to $safety + 10)
+(set: $fairness to $fairness + 3)
+(set: $trust to $trust + 2)
+(set: $revenue to $revenue - 5)
+(set: $consistency to $consistency + 4)
+(display: "Dashboard")
+
+You prepare a limited release decision: age gate, reduced recommendation visibility, corrected storefront images, and a notice to the developer.
+
+[[Finalize decision->Final Review]]
+
+
+:: Policy Panel {"position":"400,25","size":"100,100"}
+(set: $policyRead to true)
+(set: $consistency to $consistency + 12)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+<div class="policy">
+<strong>Policy excerpt:</strong><br>
+“Content that sexualizes minors or appears to sexualize minors may be restricted, removed, age-gated, demonetized, or escalated depending on context, presentation, audience targeting, and risk.”
+</div>
+
+The language sounds precise until you try to apply it. “Appears to” gives you power. “Depending on context” gives the company an exit.
+
+The policy does not tell you what the characters “are.” It tells you how the platform wants uncertainty managed.
+
+[[Compare policy to the game page->Storefront]]
+
+[[Check the automated moderation score->Automation Panel]]
+
+[[Open the developer response->Developer Response]]
+
+[[Review user reports->User Reports]]
+
+
+:: Rating Check {"position":"25,150","size":"100,100"}
+(set: $ratingChecked to true)
+(set: $consistency to $consistency + 9)
+(set: $safety to $safety + 4)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+<div class="policy">
+<strong>Rating note:</strong><br>
+The game lists an adult rating, but the storefront display places visual material before the clearest warning. Rating systems classify content, but platform layout determines who encounters it.
+</div>
+
+The rating does not solve the problem. It gives you one more procedural object to cite.
+
+[[Recommend stronger age gate and visibility limit->Limited Release]]
+
+[[Ask for storefront correction before punishment->Correction Path]]
+
+[[Continue to final review->Final Review]]
+
+
+:: Remove Ending {"position":"1025,150","size":"100,100"}
+(set: $decision to "removed")
+(set: $safety to $safety + 15)
+(set: $trust to $trust + 5)
+(set: $fairness to $fairness - 20)
+(set: $revenue to $revenue - 8)
+(set: $consistency to $consistency - 8)
+(display: "Dashboard")
+
+# Ending: Clean Removal, Dirty Hands
+
+The game disappears from the store before the press inquiry lands. The immediate backlash slows. Some users thank the platform for acting. Advertisers stay calm.
+
+Then the developer posts the removal notice. Players compare the decision to other games still available with similar or worse content. The policy begins to look less like a rule and more like a weapon that fires only when pressure is high enough.
+
+You protected users from one risk, but exposed another: a private platform can erase a livelihood through vague standards and call that safety.
+
+[[View final report->Final Report]]
+
+
+:: Separate Money Policy {"position":"400,150","size":"100,100"}
+(set: $fairness to $fairness + 8)
+(set: $consistency to $consistency + 8)
+(set: $revenue to $revenue - 8)
+(display: "Dashboard")
+
+You mark advertiser concern as relevant to placement but not sufficient for removal. The dashboard accepts your note, then displays a yellow warning:
+
+<div class="warning">
+Decision may create unresolved business exposure.
+</div>
+
+[[Continue to final review->Final Review]]
+
+
+:: Shift Begins {"position":"275,25","size":"100,100"}
+(display: "Dashboard")
+
+Your queue loads six panels: automated detection, user reports, policy language, creator response, advertiser escalation, and rating information.
+
+<div class="box">
+<strong>From:</strong> Trust & Safety Lead<br>
+<strong>Subject:</strong> Handle carefully<br><br>
+“Do not overcorrect. Do not underreact. We need a defensible action, not a philosophical essay.”
+</div>
+
+You have time to examine only a few things closely before the final decision pressure rises.
+
+[[Read the internal policy first->Policy Panel]]
+
+[[Check the automated moderation score->Automation Panel]]
+
+[[Open the developer response->Developer Response]]
+
+[[Review user reports->User Reports]]
+
+
+:: Sources {"position":"400,275","size":"100,100"}
+(display: "Dashboard")
+
+# Research and Credits
+
+This project is informed by scholarship and policy work on content moderation, platform governance, private rule-making, rating systems, and the labor of moderation.
+
+* Sarah T. Roberts, //Behind the Screen: Content Moderation in the Shadows of Social Media//.
+* Tarleton Gillespie, //Custodians of the Internet: Platforms, Content Moderation, and the Hidden Decisions That Shape Social Media//.
+* Nicolas P. Suzor, //Lawless: The Secret Rules That Govern Our Digital Lives//.
+* Entertainment Software Rating Board, “Ratings Guide” and related rating-process materials.
+* Course themes from COMP 380 on platform power, algorithmic governance, and technology ethics.
+
+Design note: the variables are not meant to measure morality perfectly. They are meant to show how platforms turn ethical tensions into operational categories.
+
+[[Return to start->Start]]
+
+
+:: Start {"position":"25,25","size":"100,100"}
+(set: $safety to 50)
+(set: $fairness to 50)
+(set: $trust to 50)
+(set: $revenue to 50)
+(set: $consistency to 50)
+(set: $fatigue to 0)
+(set: $automationReliance to 0)
+(set: $advertiserPriority to 0)
+(set: $creatorHeard to false)
+(set: $policyRead to false)
+(set: $ratingChecked to false)
+(set: $harmSignal to false)
+(set: $deadline to 6)
+(set: $decision to "undecided")
+
+# The Moderation Queue
+
+<div class="report">
+<strong>CASE ID:</strong> MQ-8841<br>
+<strong>Title:</strong> <em>Velvet Mirage: After School Arcana</em><br>
+<strong>Flag reason:</strong> sexualized young-looking characters, unclear age rating, advertiser concern, viral user reports.<br>
+<strong>Review window:</strong> one shift.
+</div>
+
+You are Mara, a trust-and-safety reviewer for a major online game storefront. The game in front of you is not illegal. It is not simple. It is profitable, controversial, stylized, and spreading fast.
+
+Your job is not to discover the obvious answer. Your job is to make a decision the company can defend.
+
+<div class="warning">
+<strong>ALERT:</strong> High priority. Press inquiry expected. Resolve before end of shift.
+</div>
+
+[[Begin review->Shift Begins]]
+
+
+:: Storefront {"position":"1150,25","size":"100,100"}
+(set: $safety to $safety + 8)
+(set: $trust to $trust - 2)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+The storefront page shows cropped promotional images, a fantasy school setting, and tags that include “visual novel,” “romance,” and “mature themes.”
+
+The age warning exists, but it is below the trailer. The trailer autoplay preview appears before the warning.
+
+That design choice matters. The platform is not just hosting the game. It is arranging attention.
+
+[[Require storefront changes->Correction Path]]
+
+[[Check rating information->Rating Check]]
+
+[[Continue to advertiser escalation->Advertiser Escalation]]
+
+
+:: Trust Automation {"position":"650,25","size":"100,100"}
+(set: $safety to $safety + 10)
+(set: $consistency to $consistency + 5)
+(set: $fairness to $fairness - 10)
+(set: $automationReliance to $automationReliance + 2)
+(display: "Dashboard")
+
+You mark the machine score as a central reason for action. The dashboard becomes easier to navigate. Several risky screenshots are already highlighted. The path to restriction is clean.
+
+Too clean.
+
+A warning appears: “Creator response deprioritized due to high-risk classification.”
+
+[[Continue to advertiser escalation->Advertiser Escalation]]
+
+[[Force open the creator response anyway->Developer Response]]
+
+
+:: Use Automation Carefully {"position":"775,25","size":"100,100"}
+(set: $safety to $safety + 5)
+(set: $fairness to $fairness + 6)
+(set: $consistency to $consistency + 4)
+(set: $fatigue to $fatigue + 8)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+You keep the score visible, but you refuse to let it become the entire decision. That takes longer. The queue does not reward patience.
+
+<div class="warning">
+New cases added to queue: 43.
+</div>
+
+[[Open the developer response->Developer Response]]
+
+[[Review user reports->User Reports]]
+
+[[Check advertiser escalation->Advertiser Escalation]]
+
+
+:: User Reports {"position":"1025,25","size":"100,100"}
+(set: $harmSignal to true)
+(set: $safety to $safety + 12)
+(set: $trust to $trust + 5)
+(set: $fatigue to $fatigue + 10)
+(set: $deadline to $deadline - 1)
+(display: "Dashboard")
+
+<div class="report">
+<strong>Report sample:</strong><br>
+“My younger sibling saw this on the front page.”<br>
+“This is obviously adult content hiding behind cute art.”<br>
+“Stop pretending anime style means harmless.”<br>
+“This is censorship. Adults can choose what to buy.”
+</div>
+
+The reports do not agree on what harm means. Some focus on minors. Some on disgust. Some on exploitation. Some on artistic freedom.
+
+A moderation job turns public conflict into checkboxes.
+
+[[Check age rating information->Rating Check]]
+
+[[Check advertiser escalation->Advertiser Escalation]]
+
+[[Return to policy->Policy Panel]]
+
+
+:: StoryStylesheet [stylesheet]
+tw-story {
+  background: #080d14;
+  color: #e8edf3;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+tw-passage {
+  max-width: 780px;
+  margin: 3em auto;
+  padding: 2em;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  box-shadow: 0 0 35px rgba(0,0,0,.55);
+  line-height: 1.65;
+  font-size: 1.08em;
+}
+
+tw-link, .link {
+  color: #8ecaff;
+  font-weight: bold;
+}
+
+tw-link:hover {
+  color: #ffffff;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+.dashboard {
+  background: #0b1220;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1em;
+  margin-bottom: 1.2em;
+  font-size: .9em;
+}
+
+.box {
+  background: #172033;
+  border-left: 5px solid #8ecaff;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.warning {
+  background: #351a1d;
+  border-left: 5px solid #ff6b6b;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.policy {
+  background: #272313;
+  border-left: 5px solid #f7c948;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.report {
+  background: #10151f;
+  border: 1px dashed #617086;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.stats {
+  background: #05080d;
+  color: #b7f7c2;
+  font-family: monospace;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.disabled {
+  color: #888;
+  font-style: italic;
+}
